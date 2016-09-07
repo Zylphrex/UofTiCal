@@ -1,0 +1,10 @@
+{
+  "username": "insert username here",
+  "password": "insert password here",
+  "browser": "headless",
+  "months": 8,
+  "sleep": 2,
+  "verbose": true,
+  "outfile": "calendar.ics",
+  "comment": "following months and sleep should be an integer (i.e. whole number)"
+}
