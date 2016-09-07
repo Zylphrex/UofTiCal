@@ -5,14 +5,11 @@ A Python Script for exporting U of T's Acorn Calendar to iCal
 ### Dependencies (Tested on)
 * selenium  2.53.6
 * pytz 2016.6.1
-* icalender 3.10
+* icalendar 3.10
 * phantomjs 2.1.1 (optional)
 
 
 #### Installing the Dependencies:
-
-###### icalender
-Instructions on installing `icalender` can be found at https://github.com/collective/icalendar
 
 ###### PhantomJS
 
