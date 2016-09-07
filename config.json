@@ -5,5 +5,5 @@
   "months": 8,
   "sleep": 2,
   "verbose": true,
-  "outfile": "calendar.ics",
+  "outfile": "calendar.ics"
 }
