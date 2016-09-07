@@ -1,7 +1,7 @@
 {
   "username": "insert username here",
   "password": "insert password here",
-  "browser": "headless",
+  "browser": "firefox",
   "months": 8,
   "sleep": 2,
   "verbose": true,
