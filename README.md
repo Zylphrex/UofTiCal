@@ -30,7 +30,7 @@ Inside the config.json file
 * **username** - insert your UTORid login
 * **password** - insert your UTORid password
 * **browser** - below are the supported options
-  * firefox
+  * firefox (it seems the latest version 48.0.2 does not work with selenium, so use a older version)
   * headless (you will need to install `PhantomJS` see above)
 * **months** - the number of months you'd like to export, default `8` for September to April
 * **sleep** - the number of seconds to wait for the page to load, default `5` adjust depending on your connection
