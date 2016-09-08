@@ -11,6 +11,7 @@ import sys
 verbose = True
 total_course_count = 0
 sleep_error = "Error: try setting the sleep property to a larger value"
+path = ""
 
 def error(browser, message):
     try:
@@ -23,10 +24,10 @@ def error(browser, message):
 
 def get_phantomjs_path():
     platform = sys.platform
-    if platform == 'linux2' or platform == 'darwin':
-        return "./phantomjs"
-    elif platform == "win32" or platform == "cygwin":
-        return "./phantomjs.exe"
+    if platform == "win32" or platform == "cygwin":
+        return ".exe"
+    else:
+        return ""
 
 def get_browser(name):
     """
@@ -39,19 +40,23 @@ def get_browser(name):
     try:
         if verbose:
             print("Initalizing webdriver...")
+        if name =='chrome':
+            browser = webdriver.Chrome("./" + path)
         if name == 'firefox':
-            browser = webdriver.Firefox() # Get local session of firefox
+            browser = webdriver.Firefox()
         elif name == 'headless':
-            browser = webdriver.PhantomJS(get_phantomjs_path())
+            browser = webdriver.PhantomJS("./" + path)
         browser.set_window_size(1120, 550) # necessary when using PhantomJS
     except:
-        error(None, "Could not initialize " + name + "!")
+        error(None, "Could not initialize " + name + " driver! Check the path property!")
     if verbose:
         print("Webdriver initialized!")
     return browser
 
 def get_info():
     global verbose
+    global path
+
     if verbose:
         print("Reading configurations...")
     f = open('config.json')
@@ -65,6 +70,8 @@ def get_info():
         sleep = data["sleep"]
         verbose = data["verbose"]
         outfile = data["outfile"]
+        if "driver" in data:
+            path = data["driver"]
     except:
         error(None, "Error in configuration file!")
 

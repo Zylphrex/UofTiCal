@@ -1,9 +1,10 @@
 {
   "username": "insert username here",
   "password": "insert password here",
-  "browser": "firefox",
+  "browser": "chrome",
   "months": 8,
   "sleep": 2,
   "verbose": true,
-  "outfile": "calendar.ics"
+  "outfile": "calendar.ics",
+  "driver": "chromedriver"
 }
