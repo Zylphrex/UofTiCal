@@ -196,7 +196,7 @@ def get_calender(browser, months):
 
                 course_count = len(headers)
 
-                for i, header, body in zip(range(1, course_count), headers, bodies):
+                for i, header, body in zip(range(1, course_count + 1), headers, bodies):
                     if verbose:
                         print("\tParsing course " + str(i) + " of " + str(course_count))
                     course = {}
