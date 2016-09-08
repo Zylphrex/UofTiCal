@@ -31,17 +31,25 @@ pip3 install -r requirements.txt
 * version 3.5.2
 
 ### Configurations
-Inside the config.json file
-* **username** - insert your UTORid login
-* **password** - insert your UTORid password
-* **browser** - below are the supported options
-  * firefox (it seems the latest version 48.0.2 does not work with selenium, so use a older version)
-  * chrome (you will need to install `chromedriver` see above)
-  * headless (you will need to install `PhantomJS` see above)
-* **months** - the number of months you'd like to export, default `8` for September to April
-* **sleep** - the number of seconds to wait for the page to load, default `5` adjust depending on your connection
-* **verbose** - print out statuses throughout execution
-* **outfile** - the name of the output file (use `.ics` for file extension)
+
+##### Basic Configurations
+
+| Property | Details |
+| --- | --- |
+| `username` | Your *UTORid*. |
+| `password` | Your *UTORid* password. |
+| `months` | The number of months you'd like to export, default `8` for September to April. |
+| `sleep` | the number of seconds to wait for the page to load, default `5` adjust depending on your connection. |
+| `verbose` | Print out statuses throughout execution if set to `true`. Nothing if set to `false`.|
+| `outfile` | The name of the output file (use `.ics` for file extension). |
+| `driver` | The name of the executable driver file (This is the one you downloaded.) Please place it in the same folder as `uoftical.py`|
+
+##### Browser Configurations
+| Options| Note |
+| --- | --- |
+| `firefox` | It seems the latest version 48.0.2 does not work with selenium, so use a older version. <br> <br> This is probably the easiest option as it requires you to only install Firefox.|
+| `chrome` | You will need to install `chromedriver` see above for instructions. <br> <br> For this, you will need to install Google Chrome Browser as well as the driver as detailed above. |
+| `headless` | You will need to install `PhantomJS` see above for instructions. <br> <br> This option has no visible GUI, only the command line status should you chose to enable them using the `verbose` property. And you only need the driver as detailed above. |
 
 ### Usage
 ```
