@@ -2,6 +2,11 @@
 A Python Script for exporting U of T's Acorn Calendar to iCal
 
 
+### STATUS UPDATE: September 9, 2016
+Even though this project is only days old, U of T has decided to remove the Academic Activities Calendar from Acorn (which this project depends on). And as a result, it will no longer work.
+
+However, U of T has added its own export button on Acorn, so you will be able to use that.
+
 ### Dependencies (Tested on)
 * selenium  2.53.6
 * pytz 2016.6.1
